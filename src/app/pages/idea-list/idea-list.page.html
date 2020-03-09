@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color = "primary">
-    <ion-title>My Ideas</ion-title>
+    <ion-title>My Events</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,8 +12,8 @@
     </ion-fab-button>
   </ion-fab>
   <ion-list>
-    <ion-item button [routerLink]="['/idea', idea.id]" *ngFor="let idea of (ideas | async)">
-      {{ idea.name }}
+    <ion-item button [routerLink]="['/idea', idea.id]" *ngFor="let idea of (ideas | async)"><!-- some sloppy html code i threw in there...-->
+      {{ idea.name }} <html><table><tr><td width="20%"></td></tr></table></html> {{idea.time}}
     </ion-item>
   </ion-list>
 

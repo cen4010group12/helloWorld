@@ -3,7 +3,7 @@
     <ion-buttons slot = "start">
         <ion-back-button defaultHref ="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>ideaDetails</ion-title>
+    <ion-title>eventDetails</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,10 +14,19 @@
   </ion-item>
  
   <ion-item>
+    <ion-label position="stacked">Time</ion-label>
+    <ion-input [(ngModel)]="idea.time"></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
     <ion-label position="stacked">Notes</ion-label>
     <ion-textarea [(ngModel)]="idea.notes" rows="8"></ion-textarea>
   </ion-item>
 </ion-content>
+
+
+  
 
 <ion-footer *ngIf="!idea.id">
   <ion-toolbar color="success">
