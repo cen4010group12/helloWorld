@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import{AngularFireModule} from '@angular/fire'
 import { environment } from 'src/environments/environment';
 import{AngularFirestoreModule,FirestoreSettingsToken} from '@angular/fire/firestore'
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import{AngularFirestoreModule,FirestoreSettingsToken} from '@angular/fire/firest
   ],
   providers: [
     StatusBar,
+    Geolocation,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: FirestoreSettingsToken, useValue: {}}

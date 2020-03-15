@@ -8,6 +8,8 @@ export interface Idea {
   name: string,
   notes: string,
   time: string,
+  latitude: number,
+  longitude: number
 }
  
 @Injectable({
@@ -45,6 +47,7 @@ export class IdeaService {
   }
  
   addIdea(idea: Idea): Promise<DocumentReference> {
+  
     return this.ideaCollection.add(idea);
   }
  
